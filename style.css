@@ -15,6 +15,22 @@ body {
     line-height: 1.8; 
 }
 
+#playlist {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+.video-item {
+    text-align: center;
+    max-width: 560px; /* Ensures each video doesn't exceed its natural width */
+  }
+
+  #playlist h1 {
+    text-align: center;
+    width: 100%; /* Ensures the heading takes the full width of the container */
+    color: red; /* Keep your existing red color if desired */
+  }
 /* Heading 1 (main titles) */
 h1 {
     text-align: center;
@@ -160,27 +176,33 @@ nav {
     margin-top: 50px;
 }
 
+#like{
+    text-align: center;
+}
 .like-btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    font-family: Verdana, Geneva, sans-serif; 
-    background-color: #e60000; 
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+        background-color: #e60000; 
+        color: white; 
+        font-size: 18px; 
+        padding: 10px 20px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
 }
 
 .like-btn:hover {
-    background-color: #990000; 
+    background-color: #cc0000; 
 }
 
 .like-count {
-    margin-top: 10px;
-    font-size: 20px;
-    color: white;
+    color: white; 
+    font-size: 18px; 
 }
+
+#like p{
+color: wheat;
+}
+
 
 /* Contact Form Styling */
 #contact {

@@ -1,7 +1,290 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    margin-top: 150px; 
+    background-color: #1a1a1a; 
+    color: white; 
+    font-family: Arial, sans-serif; 
+    font-size: 18px;
+    line-height: 1.8; 
+}
+
+/* Heading 1 (main titles) */
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif; 
+    color: #e60000; 
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 18px;
+    font-family: Arial, sans-serif; 
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.8; 
+}
+
+/* Header Styling */
+header {
+    background-color: #000000;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8); 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo img {
+    max-width: 100px;
+}
+
+/* Adjust this value based on your header's height */
+section {
+    scroll-margin-top: 140px; 
+}
+
+/* Styling for the #about section */
+#about {
+    background-color: #2b2b2b;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+/* Section heading for About */
+#about h1 {
+    font-size: 28px;
+    font-family: Verdana, Geneva, sans-serif; 
+    color: #e60000;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Paragraph styling inside the About section */
+#about p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    text-align: justify;
+    color: #f1f1f1;
+    font-family: Arial, sans-serif;
+}
+
+/* Custom scrollbar for the #about section */
+#about::-webkit-scrollbar {
+    width: 10px;
+}
+
+#about::-webkit-scrollbar-thumb {
+    background-color: #e60000; 
+    border-radius: 5px;
+}
+
+#about::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
+/* Navigation Menu Styling */
+nav ul.menu {
+    font-family: Verdana, Geneva, sans-serif;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+/* Menu Items */
+nav ul.menu li a {
+    color: white; 
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul.menu li a:hover {
+    color: #ff1a1a; 
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center; 
+}
+
+/* Styling for Image Gallery */
+.stanPictures {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    background-color: #1a1a1a; 
+}
+
+/* Individual Image Styling */
+.stanPictures img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(230, 0, 0, 0.5); 
+}
+
+/* Hover effect on images */
+.stanPictures img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(230, 0, 0, 0.7); 
+}
+
+/* Like button section */
+.like-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.like-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, sans-serif; 
+    background-color: #e60000; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.like-btn:hover {
+    background-color: #990000; 
+}
+
+.like-count {
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+/* Contact Form Styling */
+#contact {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    padding: 30px;
+    margin: 40px auto;
+    width: 60%;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(230, 0, 0, 0.5); 
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #e60000;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    background-color: #333333;
+    color: white;
+}
+
+#contact button {
+    padding: 10px 20px;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #e60000; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #990000; 
+}
+
+/* Q&A Section Styling */
+#qa {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #000000; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(230, 0, 0, 0.5); 
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Q&A Headings */
+#qa h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #e60000;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#qa h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #e60000; 
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+/* Q&A Table Styling */
+.qa-table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px;
+    background-color: #1a1a1a; 
+    color: white;
+    table-layout: fixed; 
+}
+
+.qa-table thead {
+    background-color: #e60000; 
+    color: white;
+}
+
+.qa-table th, .qa-table td {
+    border: 1px solid #e60000; 
+    padding: 12px;
+    text-align: center;
+    word-wrap: break-word; 
+}
+
+.qa-table th {
+    font-size: 18px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.qa-table td {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.qa-table tbody tr:nth-child(even) {
+    background-color: #333333; 
+}
+
+html {
+    scroll-behavior: smooth;
 }
